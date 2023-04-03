@@ -8,6 +8,7 @@ $myname = $env:COMPUTERNAME
 # Install Nginx
 Start-BitsTransfer -Source $uri -Destination $path
 Expand-Archive -Path $downloadpath -DestinationPath $path
+Remove-Item 'C:\nginx-1.22.1.zip' -Recurse
 
 # Set the home page. 
 echo "<html><body><h2>Welcome to Azure! My name is $myname .</h2></body></html>" | Set-Content -Path "C:\nginx-1.22.1\html\index.html"
