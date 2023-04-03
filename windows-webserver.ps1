@@ -20,3 +20,6 @@ echo "<html><body><h2>Welcome to Azure! My name is $myname .</h2></body></html>"
 # Run Nginx
 cd 'C:\nginx-1.22.1'
 Start nginx
+
+# Set OS Firewall to allow port 80
+New-NetFirewallRule -DisplayName "Allow Port 80" -Direction Inbound -LocalPort 80 -Protocol TCP -Action Allow
