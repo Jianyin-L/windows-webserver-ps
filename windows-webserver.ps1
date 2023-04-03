@@ -17,4 +17,5 @@ echo "<html><body><h2>Welcome to Azure! My name is $myname .</h2></body></html>"
 # $newContent | Set-Content -Path 'C:\nginx-1.22.1\html\index.html'
 
 # Run Nginx
-Start-Process -FilePath 'C:\nginx-1.22.1\nginx.exe'
+cd 'C:\nginx-1.22.1'
+Start nginx
